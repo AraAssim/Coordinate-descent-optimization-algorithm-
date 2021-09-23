@@ -5,7 +5,6 @@ The C++ code is provided to minimize functions using coordinate descent optimiza
 https://zenodo.org/record/5524786
 
 DOI:
-
 10.5281/zenodo.5524786
 
 
