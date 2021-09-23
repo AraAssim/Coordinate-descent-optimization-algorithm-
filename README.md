@@ -1,6 +1,14 @@
 # Coordinate-descent-optimization-algorithm-
 The C++ code is provided to minimize functions using coordinate descent optimization algorithm. Coordinate descent is an optimization algorithm that successively minimizes along coordinate directions to find the minimum of a function.
 
+
+https://zenodo.org/record/5524786
+
+DOI:
+
+10.5281/zenodo.5524786
+
+
 ----------
 As an example, this function is considered:
 z(x,y) = 11 + x² + y² - 2   
