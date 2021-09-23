@@ -1,4 +1,4 @@
-#define NMAX 50  // Defining the maximum number of iterations 
+#define NMAX 50  // Defining the maximum number of iterations. 
 
 #include<iostream>
 #include<cmath>
