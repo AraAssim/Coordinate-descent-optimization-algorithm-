@@ -1,23 +1,22 @@
-#define NMAX 50  // Defining the maximum number of iterations. 
+#define NMAX 100  // Defining the maximum number of iterations 
 
 #include<iostream>
 #include<cmath>
 #include<cstdio>
 
 using namespace std;
-
-// The function is written here below:
+// Our function is written here below:
 double f(double x, double y) {
-	return (11 + pow(x, 2) + pow(y, 2) - 2);
+	return (pow(x-0.5, 2) + pow(y-0.5, 2));
 }
 
-// The first derivative of the function with respect to x is
+// This is the first derivative with respect to x 
 double f_dx(double x, double y) {
 	return 2 * x;
 
 }
 
-// The first derivative of the function with respect to y is
+// This is the first derivative with respect to y
 double f_dy(double x, double y) {
 	return 2 * y;
 }
@@ -69,8 +68,6 @@ double Dihotomia(double a0, double b0, double epsilon, double x, double y)
 
 	return x_;
 }
-
-
 // Coordinate descent method
 double CoordinateDescent(double bx, double by, double epsilon)
 {
@@ -103,19 +100,17 @@ double CoordinateDescent(double bx, double by, double epsilon)
 			}
 		}
 	}
-
-	cout << " \n That is the minimum point for (epsilon=" << epsilon << ") : \n" <<
-		"f(x,y)= (" << x[k + 1] << ", " << y[k + 1] << ") = " << f(x[k + 1], y[k + 1]) << endl;
+	cout << " \n  The minimum point for (epsilon=" << epsilon << ") : \n" <<
+		"  is f(x,y)= (" << x[k + 1] << ", " << y[k + 1] << ") = " << f(x[k + 1], y[k + 1]) <<"\n"<< endl;
 	return f(x[k + 1], y[k + 1]);
-
 }
+
 int main() {
 	double x, y, epsilon;
 	cout << "Please enter initial x value\n"; cin >> x;
 	cout << "Please enter initial y value\n"; cin >> y;
 	cout << "Please enter the error rate/epsilon\n"; cin >> epsilon;
 	CoordinateDescent(x, y, epsilon);
-
 	system("pause");
 	return 0;
 }
